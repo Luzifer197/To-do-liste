@@ -19,7 +19,7 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	color: #FFF;
-	background: url(https://www.youtube.com/watch?v=IWVJq-4zW24);
+	background-color: var(--dark);
 }
 
 header {
@@ -35,24 +35,7 @@ header h1{
 	color: var(--grey);
 	margin-bottom: 1rem;
 }
-.back-video{
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
-}
-@media(min-aspect-ratio: 16/9){
-	.back-video{
-		width: 100%;
-		height: auto;
-	}
-}
-@media(max-aspect-ratio: 16/9){
-	.back-video{
-		width: auto;
-		height: 100%;
-	}
-}
+
 #new-task-form {
 	display: flex;;
 }
@@ -122,6 +105,25 @@ main {
 	padding: 1rem;
 	border-radius: 1rem;
 	margin-bottom: 1rem;
+}
+.showcase video{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.5;
+	
+}
+.overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	mix-blend-mode: overlay;	
 }
 
 .task .content {
