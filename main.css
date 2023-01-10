@@ -35,7 +35,24 @@ header h1{
 	color: var(--grey);
 	margin-bottom: 1rem;
 }
-
+.back-video{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+@media(min-aspect-ratio: 16/9){
+	.back-video{
+		width: 100%;
+		height: auto;
+	}
+}
+@media(max-aspect-ratio: 16/9){
+	.back-video{
+		width: auto;
+		height: 100%;
+	}
+}
 #new-task-form {
 	display: flex;;
 }
